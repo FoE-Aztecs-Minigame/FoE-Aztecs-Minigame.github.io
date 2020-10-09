@@ -7,6 +7,7 @@ Forge of Empires, FOE, and all associated trademarks and content belong to InnoG
 foe-aztecs-minigame.github.io is an unofficial 3rd party site, and is not directly affiliated with InnoGames.
 
 Created by MooingCat, (EN16), September 2020
+
 Youtube: https://www.youtube.com/channel/UCs0jKKXLlQa2G8PevkmtuDQ
 
 Credits: 

@@ -11,8 +11,10 @@ Created by MooingCat, (EN16), September 2020
 
 Credits: 
 
-Minesweeper logic is based on code by Ania Kubow at 
+Minesweeper logic is based on code by Ania Kubow at:
+
 Source: https://github.com/kubowania/minesweeper
+
 Video: https://youtu.be/rxdGAKRndz8
 
 MIT Licence

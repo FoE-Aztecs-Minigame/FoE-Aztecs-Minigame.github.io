@@ -106,13 +106,13 @@ function click(square,firstClick) {
   if(firstClick){
     attemptsUsed++;
     if(attemptsUsed > attemptsAmount){
-      attemptsText.innerHTML = attemptsUsed + " / " + attemptsAmount + "<br>(Diamonds Used: " + 10*(attemptsUsed-attemptsAmount) + ")</br>";
+      attemptsText.innerHTML = attemptsUsed + " / " + attemptsAmount + "<br>Diamonds Spent: " + 10*(attemptsUsed-attemptsAmount) + "</br>";
     }else{
       attemptsText.innerHTML = attemptsUsed + " / " + attemptsAmount;
     }
 
     if(attemptsUsed >= attemptsAmount){
-      document.querySelector("#warning").innerHTML = ". . . <br>You have used up your free attempts! You can still continue playing, but any extra attempt will cost 10 Diamonds</br>";
+      document.querySelector("#warning").innerHTML = "You have used up your free attempts! You can still continue playing, but any extra attempt will cost 10 Diamonds<br>. . .</br>";
     }else{
       document.querySelector("#warning").innerHTML = "";
     }

@@ -1,0 +1,100 @@
+.container {
+  width: 500px;
+  align-content: center;
+  margin: auto;
+}
+
+.newgame {
+  width: 500px;
+  align-content: center;
+  margin: auto;
+}
+
+.in {
+  height: 15px;
+}
+
+.grid {
+  height: 280px;
+  width: 440px;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #dcd6bc;
+  margin-left: 50px;
+  margin-top: 20px;
+  border: 10px solid #dcd6bc;
+  margin-bottom: 10px;
+}
+
+
+
+div {
+  font-size: 25px;
+  text-align: center;
+  font-family: 'Roboto Mono', monospace;
+}
+.valid {
+  height: 40px;
+  width: 40px;
+  border: 0px solid;
+  border-color: #f5f3eb #bab7a9 #bab7a9 #fff9db;
+  box-sizing: border-box;
+  background-image: url("./assets/tile.png");
+}
+
+.checked {
+  height: 40px;
+  width: 40px;
+  border: 0px solid;
+  background-color: #cecab7;
+  border-color: #9c998d;
+  box-sizing: border-box;
+}
+
+.good {
+  height: 40px;
+  width: 40px;
+  border: 0px solid;
+  border-color: #f5f3eb #bab7a9 #bab7a9 #fff9db;
+  box-sizing: border-box;
+  background-image: url("./assets/tile.png");
+}
+
+.one {
+  background-image: url("./assets/1.png");
+}
+
+.two {
+  background-image: url("./assets/2.png");
+}
+
+.three {
+  background-image: url("./assets/3.png");
+}
+
+.four{
+  background-image: url("./assets/4.png");
+}
+
+.five{
+  background-image: url("./assets/5.png");
+}
+
+.six{
+  background-image: url("./assets/6.png");
+}
+
+.seven{
+  background-image: url("./assets/7.png");
+}
+
+.eight{
+  background-image: url("./assets/7.png");
+}
+
+
+
+#result {
+  margin-top: 5px;
+  color: #e76346;
+}

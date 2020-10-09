@@ -1,0 +1,1 @@
+This is a simple browser tool where you can practice the Aztecs Settlement Minigame in the game Forge of Empires!

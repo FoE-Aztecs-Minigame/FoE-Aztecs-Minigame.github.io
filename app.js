@@ -27,8 +27,15 @@ function createBoard() {
   goodsArray = Array(parseInt(goodsAmount)).fill('good')
   console.log(goodsArray);
   emptyArray = Array(width*height - parseInt(goodsAmount)).fill('valid')
-  gameArray = emptyArray.concat(goodsArray)
-  shuffledArray = gameArray.sort(() => Math.random() -0.5)
+  gameArray = emptyArray.concat(goodsArray);
+
+  for(var i = gameArray.length - 1; i >= 0; i--){
+    var j = Math.floor(Math.random() * i)
+    var temp = gameArray[i]
+    gameArray[i] = gameArray[j]
+    gameArray[j] = temp
+  }
+  shuffledArray = gameArray;
 
   for(let i = 0; i < width*height; i++) {
     let square = document.createElement('div')
@@ -99,13 +106,13 @@ function click(square,firstClick) {
   if(firstClick){
     attemptsUsed++;
     if(attemptsUsed > attemptsAmount){
-      attemptsText.innerHTML = attemptsUsed + " / " + attemptsAmount + "<br></br>(Diamonds Used: " + 10*(attemptsUsed-attemptsAmount) + ")";
+      attemptsText.innerHTML = attemptsUsed + " / " + attemptsAmount + "<br>(Diamonds Used: " + 10*(attemptsUsed-attemptsAmount) + ")</br>";
     }else{
       attemptsText.innerHTML = attemptsUsed + " / " + attemptsAmount;
     }
 
     if(attemptsUsed >= attemptsAmount){
-      document.querySelector("#warning").innerHTML = "You have used up your free attempts! You can still continue playing, but any extra attempt will cost 10 Diamonds";
+      document.querySelector("#warning").innerHTML = ". . . <br>You have used up your free attempts! You can still continue playing, but any extra attempt will cost 10 Diamonds</br>";
     }else{
       document.querySelector("#warning").innerHTML = "";
     }

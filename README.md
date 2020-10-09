@@ -2,8 +2,8 @@ This is a simple browser tool where you can practice the Aztecs Settlement Minig
 
 Website: https://foe-aztecs-minigame.github.io
 
-About
-Forge of Empires, FOE, and all associated trademarks and content belong to InnoGames GmbH.
+
+DISCLAIMER: Forge of Empires, FOE, and all associated trademarks and content belong to InnoGames GmbH.
 foe-aztecs-minigame.github.io is an unofficial 3rd party site, and is not directly affiliated with InnoGames.
 
 Created by MooingCat, (EN16), September 2020

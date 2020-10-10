@@ -4,15 +4,16 @@
   margin: auto;
 }
 
-.newgame {
-  width: 500px;
+.textStyle {
+  width: 100%;
   align-content: center;
   margin: auto;
 }
 
 .in {
-  height: 15px;
+  height: 20px;
 }
+
 
 .grid {
   height: 280px;

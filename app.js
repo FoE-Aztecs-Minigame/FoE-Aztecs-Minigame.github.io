@@ -17,6 +17,25 @@ let emptyArray = [];
 let gameArray = [];
 let shuffledArray = [];
 
+function shuffle(array) {
+  var currentIndex = array.length, temporaryValue, randomIndex;
+
+  // While there remain elements to shuffle...
+  while (0 !== currentIndex) {
+
+    // Pick a remaining element...
+    randomIndex = Math.floor(Math.random() * currentIndex);
+    currentIndex -= 1;
+
+    // And swap it with the current element.
+    temporaryValue = array[currentIndex];
+    array[currentIndex] = array[randomIndex];
+    array[randomIndex] = temporaryValue;
+  }
+
+  return array;
+}
+
 //create Board
 function createBoard() {
   goodsText.innerHTML = "0 / " + goodsAmount
@@ -29,13 +48,13 @@ function createBoard() {
   emptyArray = Array(width*height - parseInt(goodsAmount)).fill('valid')
   gameArray = emptyArray.concat(goodsArray);
 
-  for(var i = gameArray.length - 1; i >= 0; i--){
-    var j = Math.floor(Math.random() * i)
-    var temp = gameArray[i]
-    gameArray[i] = gameArray[j]
-    gameArray[j] = temp
-  }
-  shuffledArray = gameArray;
+  //for(var i = gameArray.length - 1; i >= 0; i--){
+    //var j = Math.floor(Math.random() * i)
+    //var temp = gameArray[i]
+    //gameArray[i] = gameArray[j]
+    //gameArray[j] = temp
+  //}
+  shuffledArray = shuffle(gameArray);
 
   for(let i = 0; i < width*height; i++) {
     let square = document.createElement('div')

@@ -47,13 +47,6 @@ function createBoard() {
   console.log(goodsArray);
   emptyArray = Array(width*height - parseInt(goodsAmount)).fill('valid')
   gameArray = emptyArray.concat(goodsArray);
-
-  //for(var i = gameArray.length - 1; i >= 0; i--){
-    //var j = Math.floor(Math.random() * i)
-    //var temp = gameArray[i]
-    //gameArray[i] = gameArray[j]
-    //gameArray[j] = temp
-  //}
   shuffledArray = shuffle(gameArray);
 
   for(let i = 0; i < width*height; i++) {
@@ -94,9 +87,6 @@ createBoard()
 
 //reset board
 function newGame() {
-  for(var i = 0; i< width*height; i++){
-    //document.getElementById(i).parentNode.removeChild(document.getElementById(i));
-  }
   document.querySelector("#warning").innerHTML = "";
   grid.innerHTML = "";
   grid = document.querySelector('.grid')
@@ -130,10 +120,13 @@ function click(square,firstClick) {
       attemptsText.innerHTML = attemptsUsed + " / " + attemptsAmount;
     }
 
-    if(attemptsUsed >= attemptsAmount){
-      document.querySelector("#warning").innerHTML = "You have used up your free attempts! You can still continue playing, but any extra attempt will cost 10 Diamonds<br>. . .</br>";
-    }else{
-      document.querySelector("#warning").innerHTML = "";
+    
+    if(goodsAmount != goodsFound){
+      if(attemptsUsed >= attemptsAmount){
+        document.querySelector("#warning").innerHTML = "You have used up your free attempts! You can still continue playing, but any extra attempt will cost 10 Diamonds<br>. . .</br>";
+      }else{
+        document.querySelector("#warning").innerHTML = "";
+      }
     }
   }
   if (square.classList.contains('good')) {
@@ -162,7 +155,9 @@ function goodOpened(square) {
   goodsFound++;
   if(goodsFound > goodsAmount){goodsFound = goodsAmount}
   goodsText.innerHTML = goodsFound + " / " + goodsAmount 
-
+  if(goodsFound == goodsAmount){
+    document.querySelector("#warning").innerHTML = "Congratulations! You found all the goods!<br>. . .</br>";
+  }
 }
 
 
